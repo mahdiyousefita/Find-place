@@ -23,7 +23,11 @@ public class MainActivity extends AppCompatActivity {
         imageButtonSearch = findViewById(R.id.activityMainImageButtonSearch);
         imageButtonProfile = findViewById(R.id.activityMainImageButtonProfile);
 
+
         addFragment(new HomeFragment());
+
+
+        clickHandler();
     }
 
     private void addFragment(Fragment fragment){
@@ -44,7 +48,28 @@ public class MainActivity extends AppCompatActivity {
     private void clickHandler(){
 
         imageButtonHome.setOnClickListener(v -> {
-            imageButtonHome.setImageResource(R.drawable.);
+            imageButtonHome.setImageResource(R.drawable.ic_home);
+            imageButtonGraph.setImageResource(R.drawable.ic_graph_light);
+            imageButtonSearch.setImageResource(R.drawable.ic_search_light);
+            imageButtonProfile.setImageResource(R.drawable.ic_profile_light);
+        });
+        imageButtonGraph.setOnClickListener(v -> {
+            imageButtonHome.setImageResource(R.drawable.ic_home_light);
+            imageButtonGraph.setImageResource(R.drawable.ic_graph);
+            imageButtonSearch.setImageResource(R.drawable.ic_search_light);
+            imageButtonProfile.setImageResource(R.drawable.ic_profile_light);
+        });
+        imageButtonSearch.setOnClickListener(v -> {
+            imageButtonHome.setImageResource(R.drawable.ic_home_light);
+            imageButtonGraph.setImageResource(R.drawable.ic_graph_light);
+            imageButtonSearch.setImageResource(R.drawable.ic_search);
+            imageButtonProfile.setImageResource(R.drawable.ic_profile_light);
+        });
+        imageButtonProfile.setOnClickListener(v -> {
+            imageButtonHome.setImageResource(R.drawable.ic_home_light);
+            imageButtonGraph.setImageResource(R.drawable.ic_graph_light);
+            imageButtonSearch.setImageResource(R.drawable.ic_search_light);
+            imageButtonProfile.setImageResource(R.drawable.ic_profile);
         });
 
     }
