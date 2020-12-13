@@ -1,5 +1,6 @@
 package com.example.findplace.Fragments.Main;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -43,6 +44,13 @@ public class HomeFragment extends Fragment {
         getActivity().getSupportFragmentManager()
                 .beginTransaction()
                 .add(R.id.mainActivityFrameLayoutFirst, fragment)
+                .commit();
+    }
+
+    private void replaceFragment(Fragment fragment){
+        getActivity().getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.mainActivityFrameLayoutFirst, fragment)
                 .commit();
     }
 
