@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="@dimen/standardViewSize"
+        android:layout_height="@dimen/standardViewSize"
+        android:layout_marginEnd="16dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        app:srcCompat="@drawable/ic_hamburger" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="@dimen/bigViews"
+        android:layout_height="@dimen/bigViews"
+        android:layout_marginStart="@dimen/standardMargin"
+        android:layout_marginTop="@dimen/standardMargin"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/image_profile"
+            />
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space"
+        android:fontFamily="@font/basic"
+        android:text="Discover"
+        android:textColor="@color/black"
+        android:textSize="@dimen/title"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/space"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/mainActivityTextViewPlaces"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/standardMargin"
+                android:fontFamily="@font/basic"
+                android:text="Places"
+                android:textColor="@color/black"
+                android:textSize="@dimen/bigText"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mainActivityTextViewInspiration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space"
+                android:fontFamily="@font/basic"
+                android:text="Inspiration"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/bigText"
+                app:layout_constraintBottom_toBottomOf="@+id/mainActivityTextViewPlaces"
+                app:layout_constraintStart_toEndOf="@+id/mainActivityTextViewPlaces"
+                app:layout_constraintTop_toTopOf="@+id/mainActivityTextViewPlaces" />
+
+            <TextView
+                android:id="@+id/MainActivityTextViewEmotions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space"
+                android:fontFamily="@font/basic"
+                android:text="Emotions"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/bigText"
+                app:layout_constraintBottom_toBottomOf="@+id/mainActivityTextViewInspiration"
+                app:layout_constraintStart_toEndOf="@+id/mainActivityTextViewInspiration"
+                app:layout_constraintTop_toTopOf="@+id/mainActivityTextViewInspiration" />
+
+            <FrameLayout
+                android:id="@+id/mainActivityFrameLayoutFirst"
+                android:layout_width="0dp"
+                android:layout_height="260dp"
+                android:layout_marginTop="@dimen/space"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mainActivityTextViewPlaces"
+                tools:background="#2196F3" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/standardMargin"
+                android:layout_marginTop="@dimen/space"
+                android:fontFamily="@font/basic"
+                android:text="Explore more"
+                android:textColor="@color/black"
+                android:textSize="@dimen/soBigText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mainActivityFrameLayoutFirst" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/standardMargin"
+                android:fontFamily="@font/basic"
+                android:text="See all"
+                android:textColor="#3F51B5"
+                app:layout_constraintBottom_toBottomOf="@+id/textView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mainActivityRecyclerViewExplore"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="@dimen/space"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

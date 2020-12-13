@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="space">32dp</dimen>
+    <dimen name="title">36sp</dimen>
+    <dimen name="bigText">18sp</dimen>
+    <dimen name="soBigText">20sp</dimen>
+    <dimen name="standardMargin">16dp</dimen>
+    <dimen name="standardViewSize">32dp</dimen>
+    <dimen name="bigViews">42dp</dimen>
+    <dimen name="imageButtonStandard">18dp</dimen>
+
+</resources>
