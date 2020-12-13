@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.findplace.Fragments.Home.EmotionFragment;
+import com.example.findplace.Fragments.Home.InspirationFragment;
 import com.example.findplace.Fragments.Home.PlaceFragment;
 import com.example.findplace.R;
 
@@ -52,6 +54,28 @@ public class HomeFragment extends Fragment {
                 .beginTransaction()
                 .replace(R.id.mainActivityFrameLayoutFirst, fragment)
                 .commit();
+    }
+
+    private void clickHandler(){
+        textViewInspiration.setOnClickListener(v -> {
+            replaceFragment(new InspirationFragment());
+            textViewEmotions.setTextColor(getResources().getColor(R.color.gray));
+            textViewPlace.setTextColor(getResources().getColor(R.color.gray));
+            textViewInspiration.setTextColor(getResources().getColor(R.color.black));
+        });
+        textViewPlace.setOnClickListener(v -> {
+            replaceFragment(new PlaceFragment());
+            textViewEmotions.setTextColor(getResources().getColor(R.color.gray));
+            textViewPlace.setTextColor(getResources().getColor(R.color.black));
+            textViewInspiration.setTextColor(getResources().getColor(R.color.gray));
+        });
+
+        textViewEmotions.setOnClickListener(v -> {
+            replaceFragment(new EmotionFragment());
+            textViewEmotions.setTextColor(getResources().getColor(R.color.black));
+            textViewPlace.setTextColor(getResources().getColor(R.color.gray));
+            textViewInspiration.setTextColor(getResources().getColor(R.color.gray));
+        });
     }
 
     private void setUpRecyclerViewExplore(){
