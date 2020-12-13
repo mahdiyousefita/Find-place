@@ -40,7 +40,10 @@ public class HomeFragment extends Fragment {
     }
 
     private void addFragment(Fragment fragment){
-        //Todo
+        getActivity().getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.mainActivityFrameLayoutFirst, fragment)
+                .commit();
     }
 
     private void setUpRecyclerViewExplore(){
