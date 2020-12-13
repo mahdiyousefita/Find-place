@@ -156,7 +156,7 @@
 
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/activityMainImageButtonHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
@@ -172,11 +172,11 @@
         android:layout_width="26dp"
         android:layout_height="26dp"
         android:background="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
+        app:layout_constraintBottom_toBottomOf="@+id/activityMainImageButtonHome"
         app:layout_constraintEnd_toStartOf="@+id/imageButton4"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageButton2"
-        app:layout_constraintTop_toTopOf="@+id/imageButton2"
+        app:layout_constraintStart_toEndOf="@+id/activityMainImageButtonHome"
+        app:layout_constraintTop_toTopOf="@+id/activityMainImageButtonHome"
         app:srcCompat="@drawable/ic_graph_light" />
 
     <ImageButton
@@ -207,7 +207,7 @@
         android:id="@+id/activityMainFrameLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton2"
+        app:layout_constraintBottom_toTopOf="@+id/activityMainImageButtonHome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">

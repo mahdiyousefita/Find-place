@@ -7,28 +7,51 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.findplace.Adapters.ExploreRecyclerViewAdapter;
 import com.example.findplace.Fragments.Home.EmotionFragment;
 import com.example.findplace.Fragments.Home.InspirationFragment;
 import com.example.findplace.Fragments.Home.PlaceFragment;
+import com.example.findplace.Fragments.Main.HomeFragment;
 import com.example.findplace.Models.ExploreRecyclerViewItem;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    private TextView textViewPlace, textViewInspiration, textViewEmotions;
-    private RecyclerView recyclerView;
+    //private TextView textViewPlace, textViewInspiration, textViewEmotions;
+    //private RecyclerView recyclerView;
+
+    private ImageButton imageButtonHome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
-        clickHandler();
+        //clickHandler();
     }
+
+    private void init(){
+        imageButtonHome = findViewById(R.id.activityMainImageButtonHome);
+        addFragment(new HomeFragment());
+    }
+
+    private void addFragment(Fragment fragment){
+        getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.activityMainFrameLayout, fragment)
+                .commit();
+    }
+
+
+
+
+
+
+    /*
 
     private void init(){
         textViewPlace = findViewById(R.id.mainActivityTextViewPlaces);
@@ -99,4 +122,6 @@ public class MainActivity extends AppCompatActivity {
 
         return itemList;
     }
+
+     */
 }
