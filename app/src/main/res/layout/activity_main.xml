@@ -9,9 +9,9 @@
 
     <ImageButton
         android:id="@+id/activityMainImageButtonHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="10dp"
         android:background="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/activityMainImageButtonGraph"
@@ -21,11 +21,11 @@
 
     <ImageButton
         android:id="@+id/activityMainImageButtonGraph"
-        android:layout_width="26dp"
-        android:layout_height="26dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         android:background="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/activityMainImageButtonHome"
-        app:layout_constraintEnd_toStartOf="@+id/activityMainImageButtonSerch"
+        app:layout_constraintEnd_toStartOf="@+id/activityMainImageButtonSearch"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/activityMainImageButtonHome"
         app:layout_constraintTop_toTopOf="@+id/activityMainImageButtonHome"
@@ -33,8 +33,8 @@
 
     <ImageButton
         android:id="@+id/activityMainImageButtonSearch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         android:background="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/activityMainImageButtonGraph"
         app:layout_constraintEnd_toStartOf="@+id/activityMainImageButtonProfile"
@@ -45,14 +45,14 @@
 
     <ImageButton
         android:id="@+id/activityMainImageButtonProfile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         android:background="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/activityMainImageButtonSerch"
+        app:layout_constraintBottom_toBottomOf="@+id/activityMainImageButtonSearch"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/activityMainImageButtonSerch"
-        app:layout_constraintTop_toTopOf="@+id/activityMainImageButtonSerch"
+        app:layout_constraintStart_toEndOf="@+id/activityMainImageButtonSearch"
+        app:layout_constraintTop_toTopOf="@+id/activityMainImageButtonSearch"
         app:srcCompat="@drawable/ic_profile_light" />
 
     <FrameLayout
