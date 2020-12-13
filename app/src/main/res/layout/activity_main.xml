@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+<!--
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -151,6 +152,8 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
+    -->
+
 
     <ImageButton
         android:id="@+id/imageButton2"
@@ -200,7 +203,16 @@
         app:layout_constraintTop_toTopOf="@+id/imageButton4"
         app:srcCompat="@drawable/ic_profile_light" />
 
+    <FrameLayout
+        android:id="@+id/activityMainFrameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+    </FrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
