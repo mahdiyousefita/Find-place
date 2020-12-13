@@ -6,154 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-<!--
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="@dimen/standardViewSize"
-        android:layout_height="@dimen/standardViewSize"
-        android:layout_marginEnd="16dp"
-        android:background="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/cardView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/cardView"
-        app:srcCompat="@drawable/ic_hamburger" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="@dimen/bigViews"
-        android:layout_height="@dimen/bigViews"
-        android:layout_marginStart="@dimen/standardMargin"
-        android:layout_marginTop="@dimen/standardMargin"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/image_profile"
-            />
-    </androidx.cardview.widget.CardView>
-
-
-        <TextView
-        android:id="@+id/textViewTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/space"
-        android:fontFamily="@font/basic"
-        android:text="Discover"
-        android:textColor="@color/black"
-        android:textSize="@dimen/title"
-        app:layout_constraintStart_toStartOf="@+id/cardView"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
-
-
-    <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
-        android:layout_marginTop="@dimen/space"
-        android:layout_marginBottom="@dimen/space"
-        >
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/mainActivityTextViewPlaces"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/standardMargin"
-                android:fontFamily="@font/basic"
-                android:text="Places"
-                android:textColor="@color/black"
-                android:textSize="@dimen/bigText"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/mainActivityTextViewInspiration"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/space"
-                android:fontFamily="@font/basic"
-                android:text="Inspiration"
-                android:textColor="@color/gray"
-                android:textSize="@dimen/bigText"
-                app:layout_constraintBottom_toBottomOf="@+id/mainActivityTextViewPlaces"
-                app:layout_constraintStart_toEndOf="@+id/mainActivityTextViewPlaces"
-                app:layout_constraintTop_toTopOf="@+id/mainActivityTextViewPlaces" />
-
-            <TextView
-                android:id="@+id/MainActivityTextViewEmotions"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/space"
-                android:fontFamily="@font/basic"
-                android:text="Emotions"
-                android:textColor="@color/gray"
-                android:textSize="@dimen/bigText"
-                app:layout_constraintBottom_toBottomOf="@+id/mainActivityTextViewInspiration"
-                app:layout_constraintStart_toEndOf="@+id/mainActivityTextViewInspiration"
-                app:layout_constraintTop_toTopOf="@+id/mainActivityTextViewInspiration" />
-
-            <FrameLayout
-                android:id="@+id/mainActivityFrameLayoutFirst"
-                android:layout_width="0dp"
-                android:layout_height="260dp"
-                android:layout_marginTop="@dimen/space"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/mainActivityTextViewPlaces"
-                tools:background="#2196F3" />
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/standardMargin"
-                android:layout_marginTop="@dimen/space"
-                android:fontFamily="@font/basic"
-                android:text="Explore more"
-                android:textColor="@color/black"
-                android:textSize="@dimen/soBigText"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/mainActivityFrameLayoutFirst" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/standardMargin"
-                android:fontFamily="@font/basic"
-                android:text="See all"
-                android:textColor="#3F51B5"
-                app:layout_constraintBottom_toBottomOf="@+id/textView"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/textView" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/mainActivityRecyclerViewExplore"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginTop="@dimen/space"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
-
-    -->
-
 
     <ImageButton
         android:id="@+id/activityMainImageButtonHome"
@@ -162,45 +14,45 @@
         android:layout_marginBottom="24dp"
         android:background="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+        app:layout_constraintEnd_toStartOf="@+id/activityMainImageButtonGraph"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_home" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/activityMainImageButtonGraph"
         android:layout_width="26dp"
         android:layout_height="26dp"
         android:background="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/activityMainImageButtonHome"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton4"
+        app:layout_constraintEnd_toStartOf="@+id/activityMainImageButtonSerch"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/activityMainImageButtonHome"
         app:layout_constraintTop_toTopOf="@+id/activityMainImageButtonHome"
         app:srcCompat="@drawable/ic_graph_light" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/activityMainImageButtonSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton5"
+        app:layout_constraintBottom_toBottomOf="@+id/activityMainImageButtonGraph"
+        app:layout_constraintEnd_toStartOf="@+id/activityMainImageButtonProfile"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageButton3"
-        app:layout_constraintTop_toTopOf="@+id/imageButton3"
+        app:layout_constraintStart_toEndOf="@+id/activityMainImageButtonGraph"
+        app:layout_constraintTop_toTopOf="@+id/activityMainImageButtonGraph"
         app:srcCompat="@drawable/ic_search_light" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/activityMainImageButtonProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton4"
+        app:layout_constraintBottom_toBottomOf="@+id/activityMainImageButtonSerch"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageButton4"
-        app:layout_constraintTop_toTopOf="@+id/imageButton4"
+        app:layout_constraintStart_toEndOf="@+id/activityMainImageButtonSerch"
+        app:layout_constraintTop_toTopOf="@+id/activityMainImageButtonSerch"
         app:srcCompat="@drawable/ic_profile_light" />
 
     <FrameLayout
