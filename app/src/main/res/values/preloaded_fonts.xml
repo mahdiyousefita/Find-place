@@ -2,5 +2,9 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/basic</item>
+        <item>@font/lato_light</item>
+        <item>@font/peddana</item>
+        <item>@font/play</item>
+        <item>@font/ubuntu_light</item>
     </array>
 </resources>
