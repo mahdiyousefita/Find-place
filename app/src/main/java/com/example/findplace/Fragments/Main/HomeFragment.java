@@ -1,6 +1,5 @@
 package com.example.findplace.Fragments.Main;
 
-import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -14,7 +13,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.findplace.Adapters.ExploreRecyclerViewAdapter;
-import com.example.findplace.Fragments.Home.EmotionFragment;
+import com.example.findplace.Fragments.Home.SuggestionFragment;
 import com.example.findplace.Fragments.Home.InspirationFragment;
 import com.example.findplace.Fragments.Home.PlaceFragment;
 import com.example.findplace.Models.ExploreRecyclerViewItem;
@@ -45,7 +44,7 @@ public class HomeFragment extends Fragment {
     private void init(){
         textViewPlace = view.findViewById(R.id.mainActivityTextViewPlaces);
         textViewInspiration = view.findViewById(R.id.mainActivityTextViewInspiration);
-        textViewEmotions = view.findViewById(R.id.MainActivityTextViewEmotions);
+        textViewEmotions = view.findViewById(R.id.MainActivityTextViewSuggestion);
         addFragment(new PlaceFragment());
 
         recyclerView = view.findViewById(R.id.mainActivityRecyclerViewExplore);
@@ -82,7 +81,7 @@ public class HomeFragment extends Fragment {
         });
 
         textViewEmotions.setOnClickListener(v -> {
-            replaceFragment(new EmotionFragment());
+            replaceFragment(new SuggestionFragment());
             textViewEmotions.setTextColor(getResources().getColor(R.color.black));
             textViewPlace.setTextColor(getResources().getColor(R.color.gray));
             textViewInspiration.setTextColor(getResources().getColor(R.color.gray));

@@ -88,12 +88,12 @@
                 app:layout_constraintTop_toTopOf="@+id/mainActivityTextViewPlaces" />
 
             <TextView
-                android:id="@+id/MainActivityTextViewEmotions"
+                android:id="@+id/MainActivityTextViewSuggestion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/space"
                 android:fontFamily="@font/basic"
-                android:text="Emotions"
+                android:text="Suggestion"
                 android:textColor="@color/gray"
                 android:textSize="@dimen/bigText"
                 app:layout_constraintBottom_toBottomOf="@+id/mainActivityTextViewInspiration"

@@ -25,11 +25,9 @@ public class InspirationFragment extends Fragment {
                              Bundle savedInstanceState) {
         view  = inflater.inflate(R.layout.fragment_inspiration, container, false);
 
-
         init();
 
         setUpRecyclerView();
-
 
         return view;
     }
