@@ -11,7 +11,7 @@
         android:id="@+id/activityMainImageButtonHome"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="@dimen/littleSpace"
         android:background="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/activityMainImageButtonGraph"

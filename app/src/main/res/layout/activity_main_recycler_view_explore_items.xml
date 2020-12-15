@@ -10,7 +10,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
-        app:cardBackgroundColor="#F4F0F0"
+        app:cardBackgroundColor="@color/myGray"
         app:cardCornerRadius="15dp"
         app:cardElevation="0dp"
         app:layout_constraintBottom_toTopOf="@+id/recyclerExploreTextView"

@@ -26,25 +26,26 @@
 
         <ImageButton
             android:id="@+id/imageButton6"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginStart="@dimen/standardMargin"
             android:background="#00000000"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/fragmentPlaceRecyclerViewItemsLocation"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/ic_baseline_location_on_24" />
+            app:layout_constraintTop_toTopOf="@+id/fragmentPlaceRecyclerViewItemsLocation"
+            app:srcCompat="@drawable/ic_baseline_location_on_white_24" />
 
         <TextView
             android:id="@+id/fragmentPlaceRecyclerViewItemsLocation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
+            android:layout_marginBottom="@dimen/standardMargin"
             android:fontFamily="@font/basic"
             android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="@+id/imageButton6"
+            android:textSize="@dimen/standardTextSize"
+            app:layout_constraintBottom_toBottomOf="@+id/fragmentPlaceRecyclerViewItemsImageView"
             app:layout_constraintStart_toEndOf="@+id/imageButton6"
-            app:layout_constraintTop_toTopOf="@+id/imageButton6"
             tools:text="USA, California" />
 
         <TextView
@@ -55,7 +56,7 @@
             android:fontFamily="@font/basic"
             android:textColor="@color/white"
             android:textSize="@dimen/soBigText"
-            app:layout_constraintBottom_toTopOf="@+id/imageButton6"
+            app:layout_constraintBottom_toTopOf="@+id/fragmentPlaceRecyclerViewItemsLocation"
             app:layout_constraintStart_toStartOf="@+id/imageButton6"
             tools:text="Yosemite" />
 
