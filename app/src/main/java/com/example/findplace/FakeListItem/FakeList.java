@@ -37,4 +37,16 @@ public class FakeList {
 
         return posts;
     }
+
+    public static List<Post> getFakeSuggestionPosts(){
+        List<Post> posts = new ArrayList<>();
+
+        // Todo: sort by Suggestion...
+        posts.add(new Post("Silicon Valley", "USA, San Fransisco", R.drawable.image_place_three, ""));
+        posts.add(new Post("Mississippi", "USA, New Orleans", R.drawable.image_place_four, ""));
+        posts.add(new Post("Yosemite", "Canada, Vancouver", R.drawable.image_place_two, "80"));
+
+        return posts;
+
+    }
 }

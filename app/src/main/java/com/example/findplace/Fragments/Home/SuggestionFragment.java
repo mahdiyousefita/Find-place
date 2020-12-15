@@ -3,19 +3,55 @@ package com.example.findplace.Fragments.Home;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.findplace.Adapters.HomeDiscoverRecycleAdapter;
+import com.example.findplace.FakeListItem.FakeList;
 import com.example.findplace.R;
 
 public class SuggestionFragment extends Fragment {
 
+    private View view;
+    private RecyclerView recyclerView;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_suggestion, container, false);
+
+
+        view = inflater.inflate(R.layout.fragment_suggestion, container, false);
+
+        init();
+
+        setUpRecyclerView();
+
+        return view;
+    }
+
+    private void init(){
+        recyclerView = view.findViewById(R.id.fragmentSuggestionRecyclerView);
+    }
+
+    private void setUpRecyclerView(){
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(
+                getActivity()
+                , LinearLayoutManager.HORIZONTAL
+                , false
+        );
+        HomeDiscoverRecycleAdapter adapter = new HomeDiscoverRecycleAdapter(
+                getActivity()
+                , FakeList.getFakeSuggestionPosts()
+        );
+
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
     }
 }
