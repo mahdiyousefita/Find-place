@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activityBuyTicketImageView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_span="null"
@@ -41,7 +42,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/button8"
+                android:id="@+id/activityBuyTicketButtonPeopleFive"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="@dimen/littleSpace"
@@ -50,12 +51,12 @@
                 android:text="5"
                 android:textColor="#2A2F35"
                 android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="@+id/button6"
-                app:layout_constraintStart_toEndOf="@+id/button6"
-                app:layout_constraintTop_toTopOf="@+id/button6" />
+                app:layout_constraintBottom_toBottomOf="@+id/activityBuyTicketButtonPeopleFour"
+                app:layout_constraintStart_toEndOf="@+id/activityBuyTicketButtonPeopleFour"
+                app:layout_constraintTop_toTopOf="@+id/activityBuyTicketButtonPeopleFour" />
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/activityBuyTicketButtonPeopleFour"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="@dimen/littleSpace"
@@ -64,13 +65,13 @@
                 android:text="4"
                 android:textColor="#2A2F35"
                 android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="@+id/button5"
-                app:layout_constraintStart_toEndOf="@+id/button5"
-                app:layout_constraintTop_toTopOf="@+id/button5"
+                app:layout_constraintBottom_toBottomOf="@+id/activityBuyTicketButtonPeopleThree"
+                app:layout_constraintStart_toEndOf="@+id/activityBuyTicketButtonPeopleThree"
+                app:layout_constraintTop_toTopOf="@+id/activityBuyTicketButtonPeopleThree"
                 app:layout_constraintVertical_bias="1.0" />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/activityBuyTicketButtonPeopleTwo"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="@dimen/littleSpace"
@@ -79,12 +80,12 @@
                 android:text="2"
                 android:textColor="#2A2F35"
                 android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="@+id/button"
-                app:layout_constraintStart_toEndOf="@+id/button"
-                app:layout_constraintTop_toTopOf="@+id/button" />
+                app:layout_constraintBottom_toBottomOf="@+id/activityBuyTicketButtonPeopleOne"
+                app:layout_constraintStart_toEndOf="@+id/activityBuyTicketButtonPeopleOne"
+                app:layout_constraintTop_toTopOf="@+id/activityBuyTicketButtonPeopleOne" />
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/activityBuyTicketButtonPeopleThree"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="@dimen/littleSpace"
@@ -93,13 +94,13 @@
                 android:text="3"
                 android:textColor="#2A2F35"
                 android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="@+id/button4"
-                app:layout_constraintStart_toEndOf="@+id/button4"
-                app:layout_constraintTop_toTopOf="@+id/button4"
+                app:layout_constraintBottom_toBottomOf="@+id/activityBuyTicketButtonPeopleTwo"
+                app:layout_constraintStart_toEndOf="@+id/activityBuyTicketButtonPeopleTwo"
+                app:layout_constraintTop_toTopOf="@+id/activityBuyTicketButtonPeopleTwo"
                 app:layout_constraintVertical_bias="1.0" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/activityBuyTicketTextViewName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/standardMargin"
@@ -112,16 +113,16 @@
                 tools:text="Yosemite" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/activityBuyTicketTextViewPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/standardMargin"
                 android:fontFamily="@font/basic"
                 android:textColor="@color/myBlue"
                 android:textSize="@dimen/title"
-                app:layout_constraintBottom_toBottomOf="@+id/textView4"
+                app:layout_constraintBottom_toBottomOf="@+id/activityBuyTicketTextViewName"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/textView4"
+                app:layout_constraintTop_toTopOf="@+id/activityBuyTicketTextViewName"
                 tools:text="250" />
 
             <TextView
@@ -133,21 +134,21 @@
                 android:text="$"
                 android:textColor="@color/myBlue"
                 android:textSize="@dimen/title"
-                app:layout_constraintBottom_toBottomOf="@+id/textView5"
-                app:layout_constraintEnd_toStartOf="@+id/textView5"
-                app:layout_constraintTop_toTopOf="@+id/textView5" />
+                app:layout_constraintBottom_toBottomOf="@+id/activityBuyTicketTextViewPrice"
+                app:layout_constraintEnd_toStartOf="@+id/activityBuyTicketTextViewPrice"
+                app:layout_constraintTop_toTopOf="@+id/activityBuyTicketTextViewPrice" />
 
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@+id/textView3"
-                app:layout_constraintStart_toStartOf="@+id/textView4"
-                app:layout_constraintTop_toTopOf="@+id/textView3"
+                app:layout_constraintBottom_toBottomOf="@+id/activityBuyTicketTextViewLocation"
+                app:layout_constraintStart_toStartOf="@+id/activityBuyTicketTextViewName"
+                app:layout_constraintTop_toTopOf="@+id/activityBuyTicketTextViewLocation"
                 app:srcCompat="@drawable/ic_baseline_location_on_24" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/activityBuyTicketTextViewLocation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/littleSpace"
@@ -155,7 +156,7 @@
                 android:textColor="@color/myBlue"
                 android:textSize="@dimen/standardTextSize"
                 app:layout_constraintStart_toEndOf="@+id/imageView2"
-                app:layout_constraintTop_toBottomOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/activityBuyTicketTextViewName"
                 tools:text="USA, california" />
 
             <View
@@ -164,7 +165,7 @@
                 android:layout_height="0dp"
                 android:background="#FDD835"
                 app:layout_constraintBottom_toBottomOf="@+id/textView7"
-                app:layout_constraintEnd_toEndOf="@+id/textView3"
+                app:layout_constraintEnd_toEndOf="@+id/activityBuyTicketTextViewLocation"
                 app:layout_constraintStart_toStartOf="@+id/imageView2"
                 app:layout_constraintTop_toTopOf="@+id/textView7" />
 
@@ -178,7 +179,7 @@
                 android:textColor="@color/gray"
                 android:textSize="@dimen/standardTextSize"
                 app:layout_constraintStart_toEndOf="@+id/view"
-                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                app:layout_constraintTop_toBottomOf="@+id/activityBuyTicketTextViewLocation"
                 tools:text="(4.0)" />
 
             <TextView
@@ -205,7 +206,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/activityBuyTicketButtonPeopleOne"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginTop="@dimen/littleSpace"
@@ -226,8 +227,8 @@
                 android:text="Description"
                 android:textColor="@color/black"
                 android:textSize="@dimen/soBigText"
-                app:layout_constraintStart_toStartOf="@+id/button"
-                app:layout_constraintTop_toBottomOf="@+id/button" />
+                app:layout_constraintStart_toStartOf="@+id/activityBuyTicketButtonPeopleOne"
+                app:layout_constraintTop_toBottomOf="@+id/activityBuyTicketButtonPeopleOne" />
 
             <ScrollView
                 android:id="@+id/scrollView2"
@@ -237,8 +238,8 @@
                 android:layout_marginTop="@dimen/littleSpace"
                 android:layout_marginBottom="@dimen/space"
                 android:fadeScrollbars="true"
-                app:layout_constraintBottom_toTopOf="@+id/button9"
-                app:layout_constraintEnd_toEndOf="@+id/textView5"
+                app:layout_constraintBottom_toTopOf="@+id/activityBuyTicketButtonBookTripNow"
+                app:layout_constraintEnd_toEndOf="@+id/activityBuyTicketTextViewPrice"
                 app:layout_constraintStart_toStartOf="@+id/textView10"
                 app:layout_constraintTop_toBottomOf="@+id/textView10">
 
@@ -253,7 +254,7 @@
             </ScrollView>
 
             <Button
-                android:id="@+id/button9"
+                android:id="@+id/activityBuyTicketButtonBookTripNow"
                 android:layout_width="0dp"
                 android:layout_height="70dp"
                 android:layout_marginStart="@dimen/standardMargin"
@@ -265,18 +266,18 @@
                 android:textSize="@dimen/bigText"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/scrollView2"
-                app:layout_constraintStart_toEndOf="@+id/button10" />
+                app:layout_constraintStart_toEndOf="@+id/activityBuyTicketButtonLike" />
 
             <ImageButton
-                android:id="@+id/button10"
+                android:id="@+id/activityBuyTicketButtonLike"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/buy_ticket_like_button_shape"
                 android:src="@drawable/ic_heart"
                 android:text="Button"
-                app:layout_constraintBottom_toBottomOf="@+id/button9"
+                app:layout_constraintBottom_toBottomOf="@+id/activityBuyTicketButtonBookTripNow"
                 app:layout_constraintStart_toStartOf="@+id/scrollView2"
-                app:layout_constraintTop_toTopOf="@+id/button9" />
+                app:layout_constraintTop_toTopOf="@+id/activityBuyTicketButtonBookTripNow" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
@@ -289,7 +290,7 @@
         app:layout_constraintGuide_percent="0.3" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/activityBuyTicketImageButtonMore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/standardMargin"
