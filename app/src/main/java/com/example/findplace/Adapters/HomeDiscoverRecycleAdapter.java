@@ -20,11 +20,11 @@ import java.util.zip.Inflater;
 
 import okio.InflaterSource;
 
-public class PlaceRecycleAdapter extends RecyclerView.Adapter<myViewHolder> {
+public class HomeDiscoverRecycleAdapter extends RecyclerView.Adapter<myViewHolder> {
     private Context context;
     private List<Post> posts;
 
-    public PlaceRecycleAdapter(Context context, List<Post> posts){
+    public HomeDiscoverRecycleAdapter(Context context, List<Post> posts){
         this.context = context;
         this.posts = posts;
     }
@@ -51,13 +51,15 @@ public class PlaceRecycleAdapter extends RecyclerView.Adapter<myViewHolder> {
         holder.textViewPlaceName.setText(post.getPlaceName());
         holder.textViewLocation.setText(post.getLocation());
         holder.imageViewBackground.setImageResource(post.getImageUrl());
+        holder.textViewDiscount.setText(post.getDiscount());
+
     }
 
 }
 
 class myViewHolder extends RecyclerView.ViewHolder{
     public ImageView imageViewBackground;
-    public TextView textViewLocation, textViewPlaceName;
+    public TextView textViewLocation, textViewPlaceName, textViewDiscount;
 
     public myViewHolder(@NonNull View itemView) {
         super(itemView);
@@ -68,5 +70,6 @@ class myViewHolder extends RecyclerView.ViewHolder{
         imageViewBackground = itemView.findViewById(R.id.fragmentPlaceRecyclerViewItemsImageView);
         textViewLocation = itemView.findViewById(R.id.fragmentPlaceRecyclerViewItemsLocation);
         textViewPlaceName = itemView.findViewById(R.id.fragmentPlaceRecyclerViewItemsPlaceName);
+        textViewDiscount = itemView.findViewById(R.id.fragmentPlaceRecyclerViewItemsDiscount);
     }
 }

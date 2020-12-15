@@ -8,5 +8,6 @@
     <dimen name="standardViewSize">32dp</dimen>
     <dimen name="bigViews">42dp</dimen>
     <dimen name="imageButtonStandard">18dp</dimen>
+    <dimen name="standardTextSize">14sp</dimen>
 
 </resources>

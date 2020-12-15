@@ -3,14 +3,25 @@ package com.example.findplace.Models;
 public class Post {
     private String placeName;
     private String location;
+    private String discount;
 
     // TODO: change this String ...
     private int imageUrl;
 
-    public Post(String placeName, String location, int imageUrl){
+
+    public Post(String placeName, String location, int imageUrl, String discount){
         this.placeName = placeName;
         this.location = location;
         this.imageUrl = imageUrl;
+        this.discount = discount;
+    }
+
+    public String getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(String discount) {
+        this.discount = discount;
     }
 
     public String getPlaceName() {
