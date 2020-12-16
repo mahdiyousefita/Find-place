@@ -8,7 +8,7 @@
     tools:context=".BuyTicketActivity">
 
     <ImageView
-        android:id="@+id/activityBuyTickeImageViewPlaceImage"
+        android:id="@+id/activityBuyTicketImageViewPlaceImage"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
@@ -47,6 +47,7 @@
                 android:layout_marginStart="@dimen/littleSpace"
                 android:background="@drawable/buy_ticket_people_button_shape"
                 android:fontFamily="@font/basic"
+                android:onClick="PeopleOnClick"
                 android:text="5"
                 android:textColor="#2A2F35"
                 android:textSize="18sp"
@@ -63,6 +64,7 @@
                 android:layout_marginStart="@dimen/littleSpace"
                 android:background="@drawable/buy_ticket_people_button_shape"
                 android:fontFamily="@font/basic"
+                android:onClick="PeopleOnClick"
                 android:text="4"
                 android:textColor="#2A2F35"
                 android:textSize="18sp"
@@ -78,6 +80,7 @@
                 android:layout_marginStart="@dimen/littleSpace"
                 android:background="@drawable/buy_ticket_people_button_shape"
                 android:fontFamily="@font/basic"
+                android:onClick="PeopleOnClick"
                 android:text="2"
                 android:textColor="#2A2F35"
                 android:textSize="18sp"
@@ -92,6 +95,7 @@
                 android:layout_marginStart="@dimen/littleSpace"
                 android:background="@drawable/buy_ticket_people_button_shape"
                 android:fontFamily="@font/basic"
+                android:onClick="PeopleOnClick"
                 android:text="3"
                 android:textColor="#2A2F35"
                 android:textSize="18sp"
@@ -165,13 +169,13 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:background="#FDD835"
-                app:layout_constraintBottom_toBottomOf="@+id/textView7"
+                app:layout_constraintBottom_toBottomOf="@+id/activityBuyTicketTextViewScore"
                 app:layout_constraintEnd_toEndOf="@+id/activityBuyTicketTextViewLocation"
                 app:layout_constraintStart_toStartOf="@+id/imageView2"
-                app:layout_constraintTop_toTopOf="@+id/textView7" />
+                app:layout_constraintTop_toTopOf="@+id/activityBuyTicketTextViewScore" />
 
             <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/activityBuyTicketTextViewScore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -213,6 +217,7 @@
                 android:layout_marginTop="@dimen/littleSpace"
                 android:background="@drawable/buy_ticket_people_button_shape_black"
                 android:fontFamily="@font/basic"
+                android:onClick="PeopleOnClick"
                 android:text="1"
                 android:textColor="@color/white"
                 android:textSize="18sp"
@@ -245,7 +250,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView10">
 
                 <TextView
-                    android:id="@+id/textView12"
+                    android:id="@+id/activityBuyTicketTextViewDescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/basic"
@@ -267,10 +272,10 @@
                 android:textSize="@dimen/bigText"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/scrollView2"
-                app:layout_constraintStart_toEndOf="@+id/activityBuyTicketButtonLike" />
+                app:layout_constraintStart_toEndOf="@+id/activityBuyTicketImageButtonLike" />
 
             <ImageButton
-                android:id="@+id/activityBuyTicketButtonLike"
+                android:id="@+id/activityBuyTicketImageButtonLike"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/buy_ticket_like_button_shape"
