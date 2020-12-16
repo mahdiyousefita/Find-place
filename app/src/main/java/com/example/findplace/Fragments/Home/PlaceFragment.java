@@ -36,7 +36,10 @@ public class PlaceFragment extends Fragment {
     private void setUpRecyclerView(){
 
         //LinearLayoutManager layoutManager = ;
-        HomeDiscoverRecycleAdapter adapter = new HomeDiscoverRecycleAdapter(getActivity(), FakeList.getFakePosts());
+        HomeDiscoverRecycleAdapter adapter = new HomeDiscoverRecycleAdapter(
+                FakeList.getFakePosts()
+                , getActivity()
+        );
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
         recyclerView.setAdapter(adapter);

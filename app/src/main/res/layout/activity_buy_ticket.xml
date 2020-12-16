@@ -5,11 +5,10 @@
     android:id="@+id/activityBuyTicketImageView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_span="null"
     tools:context=".BuyTicketActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/activityBuyTickeImageViewPlaceImage"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
@@ -52,6 +51,8 @@
                 android:textColor="#2A2F35"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="@+id/activityBuyTicketButtonPeopleFour"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/activityBuyTicketButtonPeopleFour"
                 app:layout_constraintTop_toTopOf="@+id/activityBuyTicketButtonPeopleFour" />
 
@@ -256,7 +257,7 @@
             <Button
                 android:id="@+id/activityBuyTicketButtonBookTripNow"
                 android:layout_width="0dp"
-                android:layout_height="70dp"
+                android:layout_height="60dp"
                 android:layout_marginStart="@dimen/standardMargin"
                 android:layout_marginBottom="@dimen/littleSpace"
                 android:background="@drawable/buy_ticket_button_book_trip_now"
@@ -270,8 +271,8 @@
 
             <ImageButton
                 android:id="@+id/activityBuyTicketButtonLike"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:background="@drawable/buy_ticket_like_button_shape"
                 android:src="@drawable/ic_heart"
                 android:text="Button"

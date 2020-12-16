@@ -46,8 +46,8 @@ public class InspirationFragment extends Fragment {
         );
 
         HomeDiscoverRecycleAdapter adapter = new HomeDiscoverRecycleAdapter(
-                getActivity()
-                , FakeList.getFakeInspirationPosts()
+                FakeList.getFakeInspirationPosts()
+                , getActivity()
         );
 
         recyclerView.setAdapter(adapter);

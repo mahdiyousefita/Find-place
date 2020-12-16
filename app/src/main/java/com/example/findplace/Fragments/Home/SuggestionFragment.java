@@ -46,8 +46,8 @@ public class SuggestionFragment extends Fragment {
                 , false
         );
         HomeDiscoverRecycleAdapter adapter = new HomeDiscoverRecycleAdapter(
-                getActivity()
-                , FakeList.getFakeSuggestionPosts()
+                FakeList.getFakeSuggestionPosts()
+                , getActivity()
         );
 
         recyclerView.setAdapter(adapter);
