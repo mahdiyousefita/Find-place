@@ -5,10 +5,12 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.widget.ImageButton;
 import com.example.findplace.Fragments.Main.HomeFragment;
+import com.example.findplace.Fragments.Main.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity {
 
     private ImageButton imageButtonHome, imageButtonGraph, imageButtonSearch, imageButtonProfile;
+    private final int FRAME_LAYOUT = R.id.activityMainFrameLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,14 +35,14 @@ public class MainActivity extends AppCompatActivity {
     private void addFragment(Fragment fragment){
         getSupportFragmentManager()
                 .beginTransaction()
-                .add(R.id.activityMainFrameLayout, fragment)
+                .add(FRAME_LAYOUT, fragment)
                 .commit();
     }
 
     private void replaceFragment(Fragment fragment){
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.mainActivityFrameLayoutFirst, fragment)
+                .replace(FRAME_LAYOUT, fragment)
                 .commit();
 
     }
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
             imageButtonGraph.setImageResource(R.drawable.ic_graph_light);
             imageButtonSearch.setImageResource(R.drawable.ic_search_light);
             imageButtonProfile.setImageResource(R.drawable.ic_profile_light);
+            replaceFragment(new HomeFragment());
         });
         imageButtonGraph.setOnClickListener(v -> {
             imageButtonHome.setImageResource(R.drawable.ic_home_light);
@@ -70,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
             imageButtonGraph.setImageResource(R.drawable.ic_graph_light);
             imageButtonSearch.setImageResource(R.drawable.ic_search_light);
             imageButtonProfile.setImageResource(R.drawable.ic_profile);
+            replaceFragment(new ProfileFragment());
         });
 
     }
