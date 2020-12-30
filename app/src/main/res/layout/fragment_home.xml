@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -17,10 +18,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/space"
         android:fontFamily="@font/basic"
-        android:text="Discover"
+        android:text="@string/discover"
         android:textColor="@color/black"
         android:textSize="@dimen/title"
-        android:layout_marginLeft="@dimen/standardMargin"
+        android:layout_marginStart="@dimen/standardMargin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/homeIncludeToolbar" />
 
@@ -42,9 +43,9 @@
                 android:id="@+id/mainActivityTextViewPlaces"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/standardMargin"
+                android:layout_marginStart="@dimen/standardMargin"
                 android:fontFamily="@font/basic"
-                android:text="Places"
+                android:text="@string/places"
                 android:textColor="@color/black"
                 android:textSize="@dimen/bigText"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -56,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/space"
                 android:fontFamily="@font/basic"
-                android:text="Inspiration"
+                android:text="@string/inspiration"
                 android:textColor="@color/gray"
                 android:textSize="@dimen/bigText"
                 app:layout_constraintBottom_toBottomOf="@+id/mainActivityTextViewPlaces"
@@ -69,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/space"
                 android:fontFamily="@font/basic"
-                android:text="Suggestion"
+                android:text="@string/suggestion"
                 android:textColor="@color/gray"
                 android:textSize="@dimen/bigText"
                 app:layout_constraintBottom_toBottomOf="@+id/mainActivityTextViewInspiration"
@@ -93,7 +94,7 @@
                 android:layout_marginStart="@dimen/standardMargin"
                 android:layout_marginTop="@dimen/space"
                 android:fontFamily="@font/basic"
-                android:text="Explore more"
+                android:text="@string/explore_more"
                 android:textColor="@color/black"
                 android:textSize="@dimen/soBigText"
                 app:layout_constraintStart_toStartOf="parent"
@@ -105,7 +106,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/standardMargin"
                 android:fontFamily="@font/basic"
-                android:text="See all"
+                android:text="@string/see_all"
                 android:textColor="#3F51B5"
                 app:layout_constraintBottom_toBottomOf="@+id/textView"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -123,7 +124,4 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
