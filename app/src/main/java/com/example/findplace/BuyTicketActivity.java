@@ -3,11 +3,14 @@ package com.example.findplace;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.os.Bundle;
+import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,7 +28,7 @@ public class BuyTicketActivity extends AppCompatActivity {
     private TextView placeName, price, location, score, description;
     private ImageView imageViewPlaceImage;
     private Button peopleOne, peopleTwo, peopleThree, peopleFour, peopleFive, bookTripNow;
-    private ImageButton like;
+    private ImageButton like, imageButtonPopupMenuBuyTicket;
     private String discount;
 
 
@@ -52,6 +55,7 @@ public class BuyTicketActivity extends AppCompatActivity {
         peopleFive = findViewById(R.id.activityBuyTicketButtonPeopleFive);
         bookTripNow = findViewById(R.id.activityBuyTicketButtonBookTripNow);
         like = findViewById(R.id.activityBuyTicketImageButtonLike);
+        imageButtonPopupMenuBuyTicket = findViewById(R.id.activityBuyTicketImageButtonMore);
 
     }
 
@@ -65,6 +69,7 @@ public class BuyTicketActivity extends AppCompatActivity {
         fillWithFakeItems();
         bookTrip();
         likeButton();
+        setupPopupMenu();
 
     }
 
@@ -115,5 +120,37 @@ public class BuyTicketActivity extends AppCompatActivity {
         like.setOnClickListener(v -> {
             Toast.makeText(this, "Like", Toast.LENGTH_SHORT).show();
         });
+    }
+
+    private void setupPopupMenu(){
+        imageButtonPopupMenuBuyTicket.setOnClickListener(v -> {
+            Context wrapper = new ContextThemeWrapper(BuyTicketActivity.this, R.style.buyTicketMenuTheme);
+            PopupMenu popupMenuBuyTicket = new PopupMenu(wrapper, imageButtonPopupMenuBuyTicket);
+            popupMenuBuyTicket.getMenuInflater().inflate(R.menu.buy_ticket_menu, popupMenuBuyTicket.getMenu());
+
+            popupMenuBuyTicket.setOnMenuItemClickListener(item -> {
+                int id = item.getItemId();
+
+                switch (id){
+                    case R.id.buyTicketItemOne:
+                        Toast.makeText(BuyTicketActivity.this, "Item One", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.buyTicketItemTwo:
+                        Toast.makeText(BuyTicketActivity.this, "Item Two", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.buyTicketItemThree:
+                        Toast.makeText(BuyTicketActivity.this, "Item Three", Toast.LENGTH_SHORT).show();
+                        break;
+                    default:
+                        Toast.makeText(BuyTicketActivity.this, "Not found", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+
+                return true;
+            });
+
+            popupMenuBuyTicket.show();
+        });
+
     }
 }

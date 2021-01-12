@@ -10,5 +10,7 @@
     <dimen name="imageButtonStandard">18dp</dimen>
     <dimen name="standardTextSize">14sp</dimen>
     <dimen name="littleSpace">8dp</dimen>
+    <dimen name="standardMenuRadios">4dp</dimen>
+    <dimen name="standardMenuElevation">8dp</dimen>
 
 </resources>

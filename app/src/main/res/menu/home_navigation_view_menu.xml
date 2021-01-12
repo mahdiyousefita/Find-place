@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:title="Home"
+            android:id="@+id/navigationViewItemHome"/>
+        <item android:title="Likes"
+            android:id="@+id/navigationViewItemLikes"/>
+    </group>
+
+    <item android:title="title">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:title="Settings"
+                    android:id="@+id/navigationViewItemSettings"/>
+                <item android:title="About us"
+                    android:id="@+id/navigationViewItemAboutUs"/>
+            </group>
+        </menu>
+    </item>
+
+
+</menu>

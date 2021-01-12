@@ -1,6 +1,7 @@
 package com.example.findplace;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.widget.ImageButton;
@@ -11,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageButton imageButtonHome, imageButtonGraph, imageButtonSearch, imageButtonProfile;
     private final int FRAME_LAYOUT = R.id.activityMainFrameLayout;
+    private HomeFragment homeFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +26,10 @@ public class MainActivity extends AppCompatActivity {
         imageButtonGraph = findViewById(R.id.activityMainImageButtonGraph);
         imageButtonSearch = findViewById(R.id.activityMainImageButtonSearch);
         imageButtonProfile = findViewById(R.id.activityMainImageButtonProfile);
+        homeFragment = new HomeFragment();
 
 
-        addFragment(new HomeFragment());
+        addFragment(homeFragment);
 
 
         clickHandler();
@@ -54,7 +57,8 @@ public class MainActivity extends AppCompatActivity {
             imageButtonGraph.setImageResource(R.drawable.ic_graph_light);
             imageButtonSearch.setImageResource(R.drawable.ic_search_light);
             imageButtonProfile.setImageResource(R.drawable.ic_profile_light);
-            replaceFragment(new HomeFragment());
+            homeFragment = new HomeFragment();
+            replaceFragment(homeFragment);
         });
         imageButtonGraph.setOnClickListener(v -> {
             imageButtonHome.setImageResource(R.drawable.ic_home_light);
@@ -78,4 +82,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+        if (homeFragment.drawerLayout.isDrawerOpen(GravityCompat.START)){
+            homeFragment.drawerLayout.closeDrawer(GravityCompat.START);
+        }else {
+            super.onBackPressed();
+        }
+    }
 }
