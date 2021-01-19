@@ -1,10 +1,13 @@
 package com.example.findplace.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.widget.Button;
@@ -14,10 +17,14 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.findplace.Adapters.VIewPagerBuyAdapter;
+import com.example.findplace.FakeListItem.FakeList;
 import com.example.findplace.R;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class BuyTicketActivity extends AppCompatActivity {
 
@@ -28,10 +35,12 @@ public class BuyTicketActivity extends AppCompatActivity {
             , KEY_FOR_DISCOUNT = "discount";
 
     private TextView placeName, price, location, score, description;
-    private ImageView imageViewPlaceImage;
+    // private ImageView imageViewPlaceImage;
     private Button peopleOne, peopleTwo, peopleThree, peopleFour, peopleFive, bookTripNow;
     private ImageButton like, imageButtonPopupMenuBuyTicket;
     private String discount;
+
+    private int position = 0;
 
 
     @Override
@@ -41,6 +50,37 @@ public class BuyTicketActivity extends AppCompatActivity {
 
         init();
         setUpViewsAction();
+
+
+        setupViewPagerImages();
+    }
+
+    private void setupViewPagerImages() {
+        ViewPager2 viewPager2Images = findViewById(R.id.viewPagerBuyTicket);
+        List<Integer> imagesIDS = FakeList.getViewPagerImages();
+        VIewPagerBuyAdapter adapter = new VIewPagerBuyAdapter(imagesIDS);
+        viewPager2Images.setAdapter(adapter);
+
+        setTimerToViewPager(viewPager2Images, imagesIDS.size());
+    }
+
+    private void setTimerToViewPager(ViewPager2 viewPager, int size) {
+        Timer timer;
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
+                           @Override
+                           public void run() {
+                               new Handler(Looper.getMainLooper()).post(() -> {
+                                   if (viewPager.getCurrentItem() == size - 1)
+                                       position = 0;
+                                   else
+                                       position++;
+                                   viewPager.setCurrentItem(position, true);
+                               });
+                           }
+                       },
+                8000,
+                8000);
     }
 
     private void init(){
@@ -49,7 +89,7 @@ public class BuyTicketActivity extends AppCompatActivity {
         location = findViewById(R.id.activityBuyTicketTextViewLocation);
         score = findViewById(R.id.activityBuyTicketTextViewScore);
         description = findViewById(R.id.activityBuyTicketTextViewDescription);
-        imageViewPlaceImage = findViewById(R.id.activityBuyTicketImageViewPlaceImage);
+        //imageViewPlaceImage = findViewById(R.id.activityBuyTicketImageViewPlaceImage);
         peopleOne = findViewById(R.id.activityBuyTicketButtonPeopleOne);
         peopleTwo = findViewById(R.id.activityBuyTicketButtonPeopleTwo);
         peopleThree = findViewById(R.id.activityBuyTicketButtonPeopleThree);
@@ -66,7 +106,7 @@ public class BuyTicketActivity extends AppCompatActivity {
         placeName.setText(bundle.getString(KEY_FOR_PLACE_NAME));
         location.setText(bundle.getString(KEY_FOR_LOCATION));
         discount = bundle.getString(KEY_FOR_DISCOUNT);
-        imageViewPlaceImage.setImageResource(bundle.getInt(KEY_FOR_IMAGE_URL));     // Todo: change this to real url...
+        //imageViewPlaceImage.setImageResource(bundle.getInt(KEY_FOR_IMAGE_URL));     // Todo: change this to real url...
 
         fillWithFakeItems();
         bookTrip();

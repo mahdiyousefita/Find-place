@@ -49,4 +49,14 @@ public class FakeList {
         return posts;
 
     }
+
+    public static List<Integer> getViewPagerImages(){
+        List<Integer> images = new ArrayList<>();
+
+        for (int i = 0; i < FakeList.getFakePosts().size(); i++){
+            images.add(FakeList.getFakePosts().get(i).getImageUrl());
+        }
+
+        return images;
+    }
 }

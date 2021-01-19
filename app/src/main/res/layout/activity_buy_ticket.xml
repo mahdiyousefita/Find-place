@@ -7,17 +7,17 @@
     android:layout_height="match_parent"
     tools:context=".Activity.BuyTicketActivity">
 
-    <ImageView
-        android:id="@+id/activityBuyTicketImageViewPlaceImage"
+
+    <include
+        layout="@layout/buy_activity_view_pager"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/image_place_one" />
+        />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
