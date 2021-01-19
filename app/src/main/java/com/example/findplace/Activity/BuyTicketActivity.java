@@ -1,4 +1,4 @@
-package com.example.findplace;
+package com.example.findplace.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.findplace.R;
 
 import java.util.ArrayList;
 import java.util.List;

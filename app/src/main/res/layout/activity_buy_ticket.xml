@@ -5,7 +5,7 @@
     android:id="@+id/activityBuyTicketImageView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BuyTicketActivity">
+    tools:context=".Activity.BuyTicketActivity">
 
     <ImageView
         android:id="@+id/activityBuyTicketImageViewPlaceImage"

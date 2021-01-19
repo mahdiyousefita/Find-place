@@ -1,4 +1,4 @@
-package com.example.findplace;
+package com.example.findplace.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.ImageButton;
 import com.example.findplace.Fragments.Main.HomeFragment;
 import com.example.findplace.Fragments.Main.ProfileFragment;
+import com.example.findplace.R;
 
 public class MainActivity extends AppCompatActivity {
 
